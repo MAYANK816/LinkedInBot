@@ -1,0 +1,19 @@
+{
+  "name": "linkedin-bot",
+  "version": "1.0.0",
+  "description": "This script helps us to like the first linkedIn Post after every auto refresh, mainly uses Node.js, Puppeteer , JavaScript.",
+  "main": "popup.js",
+  "scripts": {
+    "test": "node popup.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MAYANK816/LinkedInBot.git"
+  },
+  "author": "Mayank khatri",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MAYANK816/LinkedInBot/issues"
+  },
+  "homepage": "https://github.com/MAYANK816/LinkedInBot#readme"
+}

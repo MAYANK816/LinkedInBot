@@ -3,7 +3,7 @@ const puppeteer = require('puppeteer');
 //your linkedIn login username/email
 const email = "Youremail@gmail.com"
 //your linkedIn login password
-const pass = "yurPass"
+const pass = "yourPass"
 let browser = puppeteer.launch({
     headless: false,
     args: ['--start-maximized'],
@@ -17,7 +17,11 @@ browser.then(function (browserObj) {
     return browserObj.newPage();
 }).then(function (newTab) {
     page = newTab;
-    return newTab.goto('https://www.linkedin.com/uas/login?session_redirect=https%3A%2F%2Fwww%2Elinkedin%2Ecom%2Ffeed%2F&fromSignIn=true&trk=cold_join_sign_in')
+    return newTab.goto('https://www.linkedin.com/uas/login?session_redirect=https%3A%2F%2Fwww%2Elinkedin%2Ecom%2Ffeed%2F&fromSignIn=true&trk=cold_join_sign_in', {
+        waitUntil: 'load',
+        // Remove the timeout
+        timeout: 0
+    })
 
 }).then(function () {
     return page.type("input[id='username']", email, { delay: 50 });
