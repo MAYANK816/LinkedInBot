@@ -1,9 +1,9 @@
 const puppeteer = require('puppeteer');
 
 //your linkedIn login username/email
-const email = "Youremail@gmail.com"
+const email = "yourEmail@gmail.com"
 //your linkedIn login password
-const pass = "yourPass"
+const pass = "your Pass"
 let browser = puppeteer.launch({
     headless: false,
     args: ['--start-maximized'],
